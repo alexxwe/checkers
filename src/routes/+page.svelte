@@ -32,7 +32,7 @@
         <div class="grid grid-cols-8">
             <!-- cells per row -->
             {#each row as cell, cellIdx}
-                <div class="bg-red-400 w-20 h-20 m-1 flex justify-center items-center">
+                <div class="{(rowIdx + cellIdx) % 2 ? "bg-orange-200" : "bg-yellow-900"} w-20 h-20 m-1 flex justify-center items-center">
                     <div class="{colorPiece(cell)} w-12 h-12 rounded-full" />
                     {rowIdx}
                     {cellIdx}
